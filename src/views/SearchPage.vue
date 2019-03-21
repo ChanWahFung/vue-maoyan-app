@@ -88,9 +88,9 @@ export default {
                     this.$indicator.close();
                 })
         },
-        inputEvent(){
-            let type = this.$route.query.searchtype;
+        inputEvent(){ 
             clearTimeout(this.timer);
+            let type = this.$route.query.searchtype;
             this.timer = setTimeout(()=>{
                 if(type=='movie'){
                     this.getMovieData()

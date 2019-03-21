@@ -1,5 +1,6 @@
 <template>
     <div class="login-page">
+        <div class="bg"></div>
         <div @click="goBack" class="back iconfont icon-fanhui">返回</div>
         <div class="logo">
             <img src="../../public/img/logo.jpg">
@@ -57,7 +58,6 @@ export default {
             vm.app.showHeader = false;
             vm.app.showTab = false;
             vm.from = from
-            console.log(vm.from);
         });
     }
 }
@@ -71,26 +71,43 @@ export default {
     padding: 12px;
     font-size: 0px;
     height: 100vh;
-    background: rgb(250, 250, 250);
+    box-sizing: border-box;
+
+    .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url(../../public/img/login-bg.jpg) no-repeat;
+        opacity: .5;
+    }
 }
 .back{
+    z-index: 5;
+    position: relative;
     display: inline-block;
     font-size: 15px;
     padding: 15px 0;
+    color:#fff;
 }
 .login-form {  
 
     >div{
         margin-top: 15px;
+        border-radius: 10px;
+        overflow: hidden;
     }
 }
 .logo{
+    z-index: 5;
+    position: relative;
     padding: 30px 0; 
     text-align: center;
     
     >img{
-        width: 1rem;
-        height: 1rem;
+        width: 1.2rem;
+        height: 1.2rem;
         border-radius: 50%;
     }
 }

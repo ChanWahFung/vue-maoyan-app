@@ -142,9 +142,10 @@ export default {
             return `${rowId}排${colseat}座`
         },
         selectSeat(rowIndex,rowId,colIndex,st,seatNo){
-            if(this.selectedArr.length>=4 && st == NOT_SELECT){
+            let maxLen = this.bestRecommendation.length;
+            if(this.selectedArr.length>=maxLen && st == NOT_SELECT){
                 this.$toast({
-                    message: '每次最多可选4个座位',
+                    message: `每次最多可选${maxLen}个座位`,
                     duration: 3000
                 });
                 return;
@@ -292,7 +293,7 @@ export default {
 }
 .select-block{
     position: relative;
-    padding-bottom: 2rem; 
+    height: 80vh;
     overflow-x: auto;
     text-align: center;
 
