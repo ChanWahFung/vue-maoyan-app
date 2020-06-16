@@ -1,2 +1,3 @@
-# vue--app
-仿猫眼电影app，使用了vue-cli3、axios、mint-ui。仅作为学习用途。
+# vue-maoyan-app
+
+仿猫眼电影移动端，主要使用vue、axios、mint-ui。仅作为学习用途。
